@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
   public:
-   long long maxDiamonds(int A[], int N, int K) {
+    long long maxDiamonds(int A[], int N, int K) {
         priority_queue <int> pq;
         
         for( int i=0 ; i<N ; i++){
