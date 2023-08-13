@@ -9,13 +9,13 @@ class Solution {
         for(int i=0;i<n;i++){
             int ind= i+1;
             if(i>0 && nums[i]==nums[i-1]){
-                dp[ind]= dp[ind] | dp[ind-2];
+                dp[ind] |= dp[ind-2];
             }
             if(i>1 && nums[i]==nums[i-1] && nums[i]==nums[i-2]){
-                dp[ind] = dp[ind-2] | dp[ind-3];
+                dp[ind] |= dp[ind-3];
             }
             if(i>1 && nums[i]==nums[i-1]+1 && nums[i]==nums[i-2]+2){
-                dp[ind]= dp[ind] | dp[ind-3];
+                dp[ind] |= dp[ind-3];
             }
         }
         return dp[n];
