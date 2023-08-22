@@ -2,9 +2,11 @@ class Solution {
     public int minDistance(String word1, String word2) {
         int n= word1.length();
         int m= word2.length();
-        int deletion_opearation= n- lcs(word1, word2);
-        int insert_operation= m-lcs(word1, word2);
-        return deletion_opearation + insert_operation;   
+        // int deletion_opearation= n- lcs(word1, word2);
+        // int insert_operation= m-lcs(word1, word2);
+        // return deletion_opearation + insert_operation; 
+        // or
+        return m+n- 2* lcs(word1, word2);  
     }
    
     public static  int lcs(String s1, String s2){
